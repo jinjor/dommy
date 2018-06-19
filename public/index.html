@@ -1,15 +1,4 @@
-<style>
-input:valid + .validation-error {
-  color: red;
-  display: none;
-}
-input:not([type]) {
-  border-color: red;
-}
-input[type="text"]:not([placeholder]) {
-  border-color: red;
-}
-</style>
+<link rel="stylesheet" href="dommy.css">
 <form id="form" method="POST" action="/objects">
     <div>
         <input name="foo" type="text" value="Foo" placeholder="" required>
@@ -22,5 +11,5 @@ input[type="text"]:not([placeholder]) {
         <button id="submit">Send</button>
     </div>
 </form>
-<script src="./domful.js"></script>
+<script src="./dommy.js"></script>
 <script src="./app.js"></script>

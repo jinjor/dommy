@@ -1,0 +1,10 @@
+input:valid + .validation-error {
+  color: red;
+  display: none;
+}
+input:not([type]) {
+  border-color: red;
+}
+input[type="text"]:not([placeholder]) {
+  border-color: red;
+}
