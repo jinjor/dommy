@@ -1,6 +1,6 @@
 (function() {
   function decodeInput(input) {
-    const id = input.getAttribute("name");
+    const id = input.getAttribute("id");
     const name = input.getAttribute("name");
     const type = input.getAttribute("type");
     let value = input.value;
