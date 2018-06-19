@@ -40,7 +40,7 @@
     const { id, value } = decodeInput(target);
     localStorage.setItem(id, JSON.stringify(value));
   }
-  function handleSubmit(e) {
+  function handleSubmit(method, e) {
     e.preventDefault();
     const object = decodeForm(form);
     const url = form.getAttribute("action");
@@ -70,6 +70,6 @@
       loadStorage(form);
       form.addEventListener("input", syncStorage);
     }
-    form.addEventListener("submit", handleSubmit);
+    form.addEventListener("submit", e => handleSubmit(method, e));
   }
 })();
