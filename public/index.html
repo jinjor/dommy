@@ -1,0 +1,26 @@
+<style>
+input:valid + .validation-error {
+  color: red;
+  display: none;
+}
+input:not([type]) {
+  border-color: red;
+}
+input[type="text"]:not([placeholder]) {
+  border-color: red;
+}
+</style>
+<form id="form" method="POST" action="/objects">
+    <div>
+        <input name="foo" type="text" value="Foo" placeholder="" required>
+        <span class="validation-error">should not be empty</span>
+    </div>
+    <div>
+        <input name="bar" type="number" value="0">
+    </div>
+    <div>
+        <button id="submit">Send</button>
+    </div>
+</form>
+<script src="./domful.js"></script>
+<script src="./app.js"></script>
